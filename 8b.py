@@ -9,7 +9,7 @@ Created on Sat Oct 16 03:58:13 2021
 def read_the_document():
     with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
         for linje in fila:
-            return linje
+            print(linje)
 
 class MultipleChoice:
     #Constructor
@@ -31,7 +31,7 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    print(read_the_document())
+    read_the_document()
     
     
     
