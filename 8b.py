@@ -26,12 +26,22 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
+    
+    
+    
+    
+    
+    
+    
+    
+    """
     question1 = MultipleChoice('What´s best?', ['Mac', 'PC'], 1)
     question2 = MultipleChoice('Biggest city in England?' , ['Manchester','Liverpool', 'London'], 3)
     answer1 = int(input(question1))
     print(question1.answer_check(answer1))
     answer2 = int(input(question2))
     print(question2.answer_check(answer2))
+    """
     
 
 
