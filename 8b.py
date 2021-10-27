@@ -6,6 +6,11 @@ Created on Sat Oct 16 03:58:13 2021
 @author: jjberg_
 """
 
+def read_the_document():
+    with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
+        for linje in fila:
+            return linje
+
 class MultipleChoice:
     #Constructor
     def __init__(self, question, alternatives, correct_answer):
@@ -26,7 +31,7 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    
+    print(read_the_document())
     
     
     
