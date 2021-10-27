@@ -7,16 +7,17 @@ Created on Sat Oct 16 03:58:13 2021
 """
 
 def read_the_document():
+    question_list = list()
     with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
         for linje in fila:
             print(linje)
 
 class MultipleChoice:
     #Constructor
-    def __init__(self, question, alternatives, correct_answer):
+    def __init__(self, question, correct_answer, alternatives):
         self.question = question
-        self.alternatives = alternatives
         self.correct_answer = correct_answer
+        self.alternatives = alternatives
         
     
     def answer_check(self, entered_integer):
@@ -31,7 +32,11 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    read_the_document()
+    #read_the_document()
+    question1 = MultipleChoice('What is best?', 1 , ['Mac', 'PC'])
+    answer1 = int(input(question1))
+    print(question1.answer_check(answer1))
+    
     
     
     
