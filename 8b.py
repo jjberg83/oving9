@@ -10,7 +10,14 @@ def read_the_document():
     question_list = list()
     with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
         for linje in fila:
-            print(linje)
+            linje_liste = linje.replace(':', ',').split(',')
+            sporsmaal = linje_liste[0]
+            rett_svar = linje_liste[1]
+            alternativer = linje_liste[2:]
+            print(f'Spørsmålet er: {sporsmaal}')
+            print(f'Rett svar er: {rett_svar}')
+            print(f'Alternativene er: {alternativer}')
+            
 
 class MultipleChoice:
     #Constructor
@@ -32,10 +39,8 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    #read_the_document()
-    question1 = MultipleChoice('What is best?', 1 , ['Mac', 'PC'])
-    answer1 = int(input(question1))
-    print(question1.answer_check(answer1))
+    read_the_document()
+    
     
     
     
@@ -45,12 +50,9 @@ if __name__ == '__main__':
     
     
     """
-    question1 = MultipleChoice('What´s best?', ['Mac', 'PC'], 1)
-    question2 = MultipleChoice('Biggest city in England?' , ['Manchester','Liverpool', 'London'], 3)
+    question1 = MultipleChoice('What is best?', 1 , ['Mac', 'PC'])
     answer1 = int(input(question1))
     print(question1.answer_check(answer1))
-    answer2 = int(input(question2))
-    print(question2.answer_check(answer2))
     """
     
 
