@@ -14,9 +14,8 @@ def read_the_document():
             sporsmaal = linje_liste.pop(0)
             rett_svar = int(linje_liste.pop(0))
             alternativer = [x.strip(' []') for x in linje_liste]
-            print(f'Spørsmålet er: {sporsmaal}')
-            print(f'Rett svar er: {rett_svar}')
-            print(f'Alternativene er: {alternativer}')
+            ny_instans = MultipleChoice(sporsmaal, rett_svar, alternativer)
+            print(ny_instans)
             
 
             
@@ -37,7 +36,7 @@ class MultipleChoice:
     
     
     def __str__(self):
-        return f'{self.question} (enter the number you think is correct under the dotted line below)\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+ '\n--------------------\n'
+        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+ '\n--------------------\nDitt svar:\n'
        
     
 if __name__ == '__main__':
