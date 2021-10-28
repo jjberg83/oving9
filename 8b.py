@@ -16,6 +16,7 @@ def read_the_document():
             alternativer = [x.strip(' []') for x in linje_liste]
             ny_instans = MultipleChoice(sporsmaal, rett_svar, alternativer)
             question_list.append(ny_instans)
+    return question_list
             
 
 class MultipleChoice:
@@ -38,7 +39,7 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    read_the_document()
+    print(read_the_document())
     
     
     
