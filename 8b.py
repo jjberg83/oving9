@@ -16,7 +16,6 @@ def read_the_document():
             alternativer = [x.strip(' []') for x in linje_liste]
             ny_instans = MultipleChoice(sporsmaal, rett_svar, alternativer)
             question_list.append(ny_instans)
-            print(alternativer[rett_svar])
     return question_list
             
 
@@ -44,7 +43,27 @@ class MultipleChoice:
        
     
 if __name__ == '__main__':
-    print(read_the_document())
+    liste_med_alle_instansene = read_the_document() # Unngår jeg global variabel slik?
+    
+"""
+Her er et eksempel på spill, de to første spørsmålene:
+    
+Den delen av en datamaskin som kjører programmet kalles? 
+Svaralternativer:
+0: RAM
+1: Harddisk
+2: CPU
+3: Sekundærlager
+
+Velg et svaralternativ for spiller 1: 0
+Velg et svaralternativ for spiller 2: 2
+
+Korrekt svar: CPU
+
+Spiller 1: Feil
+Spiller 2: Korrekt
+"""
+    
     
     
     
