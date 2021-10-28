@@ -15,9 +15,7 @@ def read_the_document():
             rett_svar = int(linje_liste.pop(0))
             alternativer = [x.strip(' []') for x in linje_liste]
             ny_instans = MultipleChoice(sporsmaal, rett_svar, alternativer)
-            print(ny_instans)
-            
-
+            question_list.append(ny_instans)
             
 
 class MultipleChoice:
