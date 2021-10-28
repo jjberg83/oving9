@@ -16,6 +16,7 @@ def read_the_document():
             alternativer = [x.strip(' []') for x in linje_liste]
             ny_instans = MultipleChoice(sporsmaal, rett_svar, alternativer)
             question_list.append(ny_instans)
+            print(alternativer[rett_svar])
     return question_list
             
 
@@ -32,6 +33,10 @@ class MultipleChoice:
             return 'You´re right champ!'
         else:
             return 'Sorry mate, that´s not correct...'
+        
+    
+    def korrekt_svar_tekst(self):
+        return self.alternatives[self.correct_answer]
     
     
     def __str__(self):
