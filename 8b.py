@@ -11,14 +11,14 @@ def read_the_document():
     with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
         for linje in fila:
             linje_liste = linje.replace(':', ',').strip('\n').split(',')
-            #print(linje_liste)
             sporsmaal = linje_liste.pop(0)
             rett_svar = int(linje_liste.pop(0))
-            alternativer = linje_liste
-            #alternativer = linje_liste[2].strip(' []').split(',')
-            #print(f'Spørsmålet er: {sporsmaal}')
-            #print(f'Rett svar er: {rett_svar}')
+            alternativer = [x.strip(' []') for x in linje_liste]
+            print(f'Spørsmålet er: {sporsmaal}')
+            print(f'Rett svar er: {rett_svar}')
             print(f'Alternativene er: {alternativer}')
+            
+
             
 
 class MultipleChoice:
