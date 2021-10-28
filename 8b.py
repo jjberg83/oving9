@@ -10,12 +10,13 @@ def read_the_document():
     question_list = list()
     with open('sporsmaalsfil.txt', 'r', encoding='UTF8') as fila:
         for linje in fila:
-            linje_liste = linje.replace(':', ',').split(',')
+            linje_liste = linje.replace(':', ',').strip('\n').split(',')
+            #print(linje_liste)
             sporsmaal = linje_liste[0]
-            rett_svar = linje_liste[1]
-            alternativer = linje_liste[2:]
-            print(f'Spørsmålet er: {sporsmaal}')
-            print(f'Rett svar er: {rett_svar}')
+            rett_svar = int(linje_liste[1])
+            alternativer = linje_liste[2].strip(' []').split(',')
+            #print(f'Spørsmålet er: {sporsmaal}')
+            #print(f'Rett svar er: {rett_svar}')
             print(f'Alternativene er: {alternativer}')
             
 
