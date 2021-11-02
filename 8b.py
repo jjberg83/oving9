@@ -39,7 +39,7 @@ class MultipleChoice:
     
     
     def __str__(self):
-        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+'Ditt svar her: \n'
+        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+' \n'
        
     
 if __name__ == '__main__':
@@ -48,10 +48,17 @@ if __name__ == '__main__':
     sum_spiller2 = 0
     for oppgave in liste_med_alle_instansene:
         print(oppgave)
+        svar_spiller1 = int(input(f'Velg et svaralternativ for spiller 1: '))
+        svar_spiller2 = int(input(f'Velg et svaralternativ for spiller 2: '))
+        
         
     print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
     print(f'Spiller 2 har til sammen {sum_spiller2} rette svar!')  
 """
+
+spm_1 = MultipleChoice('Hva heter din kjære?', 1, ['Hanne', 'Lori', 'Kathrine'])
+svar_1 = int(input(spm_1))
+print(f'Du svarte at din kjære er {spm_1.alternatives[svar_1-1]}!')
 Her er et eksempel på spill, de to første spørsmålene:
     
 Den delen av en datamaskin som kjører programmet kalles? 
