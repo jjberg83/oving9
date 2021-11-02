@@ -3,7 +3,7 @@
 """
 Created on Sat Oct 16 03:58:13 2021
 
-@author: jjberg_
+@author: jjberg
 """
 
 def read_the_document():
@@ -39,12 +39,18 @@ class MultipleChoice:
     
     
     def __str__(self):
-        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+ '\n--------------------\nDitt svar:\n'
+        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+'Ditt svar her: \n'
        
     
 if __name__ == '__main__':
-    liste_med_alle_instansene = read_the_document() 
-    
+    liste_med_alle_instansene = read_the_document()
+    sum_spiller1 = 0
+    sum_spiller2 = 0
+    for oppgave in liste_med_alle_instansene:
+        print(oppgave)
+        
+    print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
+    print(f'Spiller 2 har til sammen {sum_spiller2} rette svar!')  
 """
 Her er et eksempel på spill, de to første spørsmålene:
     
