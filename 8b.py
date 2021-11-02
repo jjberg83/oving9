@@ -28,10 +28,10 @@ class MultipleChoice:
         
     
     def answer_check(self, entered_integer):
-        if entered_integer == self.correct_answer+1:
-            return True
+        if entered_integer == self.correct_answer:
+            return 'You´re right champ!'
         else:
-            return False
+            return 'Sorry mate, that´s not correct...'
         
     
     def korrekt_svar_tekst(self):
@@ -39,34 +39,12 @@ class MultipleChoice:
     
     
     def __str__(self):
-        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+ '\n'
+        return f'{self.question}\n' + '\n'.join(f'{indeks} - {element}' for indeks, element in enumerate(self.alternatives,1))+ '\n--------------------\nDitt svar:\n'
        
     
 if __name__ == '__main__':
-    liste_med_alle_instansene = read_the_document() # Unngår jeg global variabel slik?
-    sum_spiller1 = 0
-    sum_spiller2 = 0
-    for sporsmaal in liste_med_alle_instansene:
-        print(sporsmaal)
-        svar_spiller1 = int(input("Velg et svaralternativ for spiller 1: "))
-        svar_spiller2 = int(input("Velg et svaralternativ for spiller 2: "))
-        print(f'Korrekt svar: {sporsmaal.korrekt_svar_tekst()}')
-        if sporsmaal.answer_check(svar_spiller1):
-            sum_spiller1 += 1
-            print('Spiller 1: Korrekt')
-        else:
-            print('Spiller 1: Feil')
-        if sporsmaal.answer_check(svar_spiller2):
-            sum_spiller2 += 1
-            print('Spiller 2: Korrekt')
-        else:
-            print('Spiller 2: Feil')
-    print(f'Sum spiller 1: {sum_spiller1}')
-    print(f'Sum spiller 2: {sum_spiller2}')
-        
-        
-        
-        
+    liste_med_alle_instansene = read_the_document() 
+    
 """
 Her er et eksempel på spill, de to første spørsmålene:
     
@@ -85,14 +63,6 @@ Korrekt svar: CPU
 Spiller 1: Feil
 Spiller 2: Korrekt
 """
-    
-    
-    
-    
-    
-    
-    
-    
     
 
     
