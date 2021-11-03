@@ -29,9 +29,9 @@ class MultipleChoice:
     
     def answer_check(self, entered_integer):
         if entered_integer == self.correct_answer:
-            return 'You´re right champ!'
+            return True
         else:
-            return 'Sorry mate, that´s not correct...'
+            return False
         
     
     def korrekt_svar_tekst(self):
@@ -51,18 +51,22 @@ if __name__ == '__main__':
         svar_spiller1 = int(input(f'Velg et svaralternativ for spiller 1:\n'))
         svar_spiller2 = int(input(f'Velg et svaralternativ for spiller 2:\n'))
         print(f'Korrekt svar: {oppgave.korrekt_svar_tekst()}')
-        
+        if oppgave.answer_check(svar_spiller1-1):
+            print(f'Spiller 1: Korrekt')
+            sum_spiller1 += 1
+        else:
+            print(f'Spiller 1: Feil')
+        if oppgave.answer_check(svar_spiller2-1):
+            print(f'Spiller 2: Korrekt')
+            sum_spiller2 += 1
+        else:
+            print(f'Spiller 2: Feil')
         
         
     print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
     print(f'Spiller 2 har til sammen {sum_spiller2} rette svar!')  
 """
-
-Deretter skal den skrive ut korrekt svaralternativ med å bruke
-metoden fra deloppgave e). 
     
-Deretter skal den skrive ut for hver spiller om vedkommende
-svarte korrekt eller ikke. 
 
 Programmet skal også telle antall korrekte svar for hver spiller og
 skrive ut dette til slutt. 
