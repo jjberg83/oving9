@@ -65,36 +65,7 @@ if __name__ == '__main__':
         
     print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
     print(f'Spiller 2 har til sammen {sum_spiller2} rette svar!')  
-"""
-    
 
-Programmet skal også telle antall korrekte svar for hver spiller og
-skrive ut dette til slutt. 
-
-Et eksempel på forventet output er oppgitt under. Det er helt OK at
-nummereringen starter på 1 i stedet for 0, men da må dette være gjennomført. Nummeret til
-korrekt svar i fila antar standard Python liste nummerering, som starter på 0.
-
-spm_1 = MultipleChoice('Hva heter din kjære?', 1, ['Hanne', 'Lori', 'Kathrine'])
-svar_1 = int(input(spm_1))
-print(f'Du svarte at din kjære er {spm_1.alternatives[svar_1-1]}!')
-Her er et eksempel på spill, de to første spørsmålene:
-    
-Den delen av en datamaskin som kjører programmet kalles? 
-Svaralternativer:
-0: RAM
-1: Harddisk
-2: CPU
-3: Sekundærlager
-
-Velg et svaralternativ for spiller 1: 0
-Velg et svaralternativ for spiller 2: 2
-
-Korrekt svar: CPU
-
-Spiller 1: Feil
-Spiller 2: Korrekt
-"""
     
 
     
