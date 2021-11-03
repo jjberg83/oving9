@@ -48,8 +48,10 @@ if __name__ == '__main__':
     sum_spiller2 = 0
     for oppgave in liste_med_alle_instansene:
         print(oppgave)
-        svar_spiller1 = int(input(f'Velg et svaralternativ for spiller 1: '))
-        svar_spiller2 = int(input(f'Velg et svaralternativ for spiller 2: '))
+        svar_spiller1 = int(input(f'Velg et svaralternativ for spiller 1:\n'))
+        svar_spiller2 = int(input(f'Velg et svaralternativ for spiller 2:\n'))
+        print(f'Korrekt svar: {oppgave.alternatives[oppgave.correct_answer]}')
+        
         
         
     print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
