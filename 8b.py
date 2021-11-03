@@ -50,13 +50,26 @@ if __name__ == '__main__':
         print(oppgave)
         svar_spiller1 = int(input(f'Velg et svaralternativ for spiller 1:\n'))
         svar_spiller2 = int(input(f'Velg et svaralternativ for spiller 2:\n'))
-        print(f'Korrekt svar: {oppgave.alternatives[oppgave.correct_answer]}')
+        print(f'Korrekt svar: {oppgave.korrekt_svar_tekst()}')
         
         
         
     print(f'Spiller 1 har til sammen {sum_spiller1} rette svar!')
     print(f'Spiller 2 har til sammen {sum_spiller2} rette svar!')  
 """
+
+Deretter skal den skrive ut korrekt svaralternativ med å bruke
+metoden fra deloppgave e). 
+    
+Deretter skal den skrive ut for hver spiller om vedkommende
+svarte korrekt eller ikke. 
+
+Programmet skal også telle antall korrekte svar for hver spiller og
+skrive ut dette til slutt. 
+
+Et eksempel på forventet output er oppgitt under. Det er helt OK at
+nummereringen starter på 1 i stedet for 0, men da må dette være gjennomført. Nummeret til
+korrekt svar i fila antar standard Python liste nummerering, som starter på 0.
 
 spm_1 = MultipleChoice('Hva heter din kjære?', 1, ['Hanne', 'Lori', 'Kathrine'])
 svar_1 = int(input(spm_1))
